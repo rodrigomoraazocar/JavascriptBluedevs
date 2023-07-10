@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+
+    <style>
+        body{
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        
+            </style>
+            
+
+
+
+
+</head>
+
+<body>
+    <p>Aula 01 - JavaScript- Devs2Blue</p>
+
+    <label for="Nota1">Nota1: </label>
+    <input type="text" id="Nota1"><br>
+
+    <label for="Nota2">Nota2: </label>
+    <input type="text" id="Nota2"><br>
+
+    <label for="Nota3">Nota3: </label>
+    <input type="text" id="Nota3"><br><br>
+
+    <label for="Resultado">Resultado Media: </label>
+    <input type="text" id="Resultado">
+
+    <script>
+        var Nota1Input = document.getElementById('Nota1');
+        var Nota2Input = document.getElementById('Nota2');
+        var Nota3Input = document.getElementById('Nota3');
+        var ResultadoInput = document.getElementById('Resultado');
+
+        Nota1Input.addEventListener('input', calcularMedia);
+        Nota2Input.addEventListener('input', calcularMedia);
+        Nota3Input.addEventListener('input', calcularMedia);
+
+        function calcularMedia() {
+            var Nota1 = parseInt(Nota1Input.value);
+            var Nota2 = parseInt(Nota2Input.value);
+            var Nota3 = parseInt(Nota3Input.value);
+
+            if (!isNaN(Nota1) && !isNaN(Nota2) && !isNaN(Nota3)) {
+                var Media = (Nota1 + Nota2 + Nota3) / 3;
+                ResultadoInput.value = Media;
+            } else {
+                ResultadoInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
