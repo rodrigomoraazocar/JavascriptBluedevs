@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Número Primo</title>
+</head>
+<body>
+    
+    <script>
+        var num = parseInt(prompt("Digite o número para verificar se é primo:"));
+
+        if (num < 2) {
+            alert(num + " não é um número primo.");
+        } else {
+            var isPrime = true;
+
+            for (var i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                alert(num + " é um número primo.");
+            } else {
+                alert(num + " não é um número primo.");
+            }
+        }
+    </script>
+</body>
+</html>
+

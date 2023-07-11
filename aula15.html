@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatar Número de Telefone</title>
+</head>
+<body>
+    
+    <script>
+        var numero = prompt("Digite o número de telefone:");
+
+        // Remove qualquer caracter que não seja número
+        var numerosApenas = numero.replace(/\D/g, "");
+
+        // Aplica a formatação "(XX) XXXX-XXXX"
+        var telefoneFormatado = "(" + numerosApenas.slice(0, 2) + ") " + numerosApenas.slice(2, 6) + "-" + numerosApenas.slice(6);
+
+        alert("Número de telefone formatado: " + telefoneFormatado);
+    </script>
+</body>
+</html>
