@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Crie um script que converte um determinado número de horas em minutos. Atribua o resultado a uma variável chamada "minutos". Considere que 1 hora possui 60 minutos.-->
+    <p>Aula 01 - JavaScript-Devs2Blue</p>
+    <div style="margin-left: 19px;">
+        <label for="Horas">Horas: </label>
+        <input type="text" id="Horas"><br>
+    </div>
+
+    <div style="margin-left: 1px;">
+        <label for="Resultado">Minutos: </label>
+        <input type="text" id="Resultado">
+    </div>
+
+    <script>
+        var HorasInput = document.getElementById('Horas');
+        var ResultadoInput = document.getElementById('Resultado');
+
+        HorasInput.addEventListener('input', converterHorasParaMinutos);
+
+        function converterHorasParaMinutos() {
+            var horas = parseFloat(HorasInput.value);
+
+            if (!isNaN(horas)) {
+                var minutos = horas * 60;
+                ResultadoInput.value = minutos;
+            } else {
+                ResultadoInput.value = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
