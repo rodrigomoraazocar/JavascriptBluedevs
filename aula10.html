@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2 </title>
+</head>
+<body>
+ 
+    
+    <script>
+//Crie um script que substitua as letras, conforme
+//A->4
+//I (letra i) ->1
+//E->3
+//O (letra ó) -> 0 (zero)   
+//S->5
+
+var palavra = prompt("Digite uma palavra:");
+var palavraModificada = palavra
+  .replace(/A/g, "4")
+  .replace(/I/g, "1")
+  .replace(/i/g, "1")
+  .replace(/E/g, "3")
+  .replace(/O/g, "0")
+  .replace(/ó/g, "0")
+  .replace(/S/g, "5");
+
+alert("Palavra modificada: " + palavraModificada);
+
+
+    </script>
+</body>
+</html>

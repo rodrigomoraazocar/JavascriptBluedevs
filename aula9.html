@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2 </title>
+</head>
+<body>
+ 
+    
+    <script>
+//Crie um script que extraia uma parte especifica de uma string. Por exemplo, extraia os primeiros três caracteres de uma palavra e exiba o resultado
+   var palavra= window.prompt("Digite uma palavra:");
+   var longpalavra = palavra.length;
+   
+   var tresPrimeirosCaracteres = palavra.slice(0, 3);
+   var restanteCaracteres=palavra.slice(3,longpalavra);     
+
+   window.alert("Extraindo os primeiros 3 caracteres: " + tresPrimeirosCaracteres);
+   window.alert("Palavra sem os 3 primeiros caracteres: " + restanteCaracteres);     
+
+
+
+    </script>
+</body>
+</html>
