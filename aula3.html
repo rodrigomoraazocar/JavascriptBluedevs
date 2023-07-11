@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Crie um script que calcula a área de um retângulo com base na largura e altura fornecidas. A fórmula para cálculo da área é: Área = Largura * Altura.-->
+    <p>Aula 01 - JavaScript-Devs2Blue</p>
+    <div style=margin-left:164px;>
+        <label for="Largura1">Largura: </label>
+        <input type="text" id="Largura1"><br>
+    </div>
+    <label for="Resultado">Resultado Área Retângulo: </label>
+    <input type="text" id="Resultado">
+
+    <script>
+        var LarguraInput = document.getElementById('Largura1');
+        var ResultadoInput = document.getElementById('Resultado');
+
+        LarguraInput.addEventListener('input', calcularArea);
+
+        function calcularArea() {
+            var Largura = parseFloat(LarguraInput.value);
+
+            if (!isNaN(Largura)) {
+                var Area = Largura * Largura;
+                ResultadoInput.value = Area;
+            } else {
+                ResultadoInput.value = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
