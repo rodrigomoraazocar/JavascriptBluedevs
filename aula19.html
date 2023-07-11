@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+</head>
+
+<body>
+
+    <script>
+        // Criando o vetor de 100 elementos
+        var vetor = [];
+        for (var i = 1; i<= 100; i++) {
+            vetor.push(i);
+        }
+
+        // Inicializando a variável para armazenar a soma dos elementos
+        var soma = 0;
+
+        // Calculando a soma dos elementos do vetor
+        for (var i = 0; i < vetor.length; i++) {
+            soma += vetor[i];
+        }
+
+        // Exibindo a soma no console
+        alert("A soma dos elementos é: " + soma);
+
+    </script>
+</body>
+
+</html>
