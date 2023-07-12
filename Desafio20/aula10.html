@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <p>Aula 01 - JavaScript- Devs2Blue</p>
+
+    <script>
+        // Crie um programa que solicite ao usuário uma frase e converta todas as letras para maiúsculas.
+        // Utilize um laço de repetição para percorrer cada letra da frase e atribua o resultado a uma nova variável.
+
+        var fraseUsuario = window.prompt("Digite uma frase:");
+        var fraseMaiusculas = "";
+
+        for (var i = 0; i < fraseUsuario.length; i++) {
+            var letra = fraseUsuario[i];
+            var letraMaiuscula = letra.toUpperCase();
+            fraseMaiusculas += letraMaiuscula;
+        }
+
+        window.alert("A frase em maiúsculas é: " + fraseMaiusculas);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <p>Aula 01 - JavaScript- Devs2Blue</p>
+
+    <script>
+        // Crie um programa que solicite ao usuário três notas e calcule a média.
+        // Se alguma nota for inválida (for menor que 0 ou maior que 10), solicite novamente essa nota.
+        // Utilize um laço de repetição e condicional para validar as notas.
+
+        var nota1, nota2, nota3;
+
+        nota1 = parseInt(window.prompt("Digite a Nota1:"));
+        if (nota1 < 0 || nota1 > 10) {
+            do {
+                window.alert("Nota inválida! Digite novamente Nota1.");
+                nota1 = parseInt(window.prompt("Digite a Nota1:"));
+            } while (nota1 < 0 || nota1 > 10);
+        }
+
+        nota2 = parseInt(window.prompt("Digite a Nota2:"));
+        if (nota2 < 0 || nota2 > 10) {
+            do {
+                window.alert("Nota inválida! Digite novamente Nota2.");
+                nota2 = parseInt(window.prompt("Digite a Nota2:"));
+            } while (nota2 < 0 || nota2 > 10);
+        }
+
+        nota3 = parseInt(window.prompt("Digite a Nota3:"));
+        if (nota3 < 0 || nota3 > 10) {
+            do {
+                window.alert("Nota inválida! Digite novamente Nota3.");
+                nota3 = parseInt(window.prompt("Digite a Nota3:"));
+            } while (nota3 < 0 || nota3 > 10);
+        }
+
+        var media = (nota1 + nota2 + nota3) / 3;
+        window.alert("A média das notas é: " + media);
+    </script>
+</body>
+</html>

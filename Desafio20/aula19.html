@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+</head>
+
+<body>
+
+    <script>
+      // Crie um programa que conte a quantidade de letras "a" em uma string informada pelo usuário.
+
+      var cadena = window.prompt("Digite uma string:");
+      var contador = 0;
+
+      for (var i = 0; i < cadena.length; i++) {
+          if (cadena[i] === "a") {
+              contador++;
+          }
+      }
+
+      window.alert("A quantidade de letras 'a' na string é: " + contador);
+    </script>
+</body>
+
+</html>
+

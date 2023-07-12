@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <p>Aula 01 - JavaScript- Devs2Blue</p>
+
+    <script>
+      // Crie um jogo de adivinhação em que o usuário tem que tentar acertar um número aleatório de 1 a 100,
+      // dando dicas de "maior" ou "menor" até acertar.
+
+      var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+      var intentos = 0;
+      var acertado = false;
+
+      while (!acertado) {
+        var numeroUsuario = parseInt(window.prompt("Digite um número de 1 a 100:"));
+        intentos++;
+
+        if (numeroUsuario === numeroAleatorio) {
+          acertado = true;
+          window.alert("Parabéns! Você acertou o número em " + intentos + " tentativas.");
+        } else if (numeroUsuario < numeroAleatorio) {
+          window.alert("O número é maior. Tente novamente.");
+        } else {
+          window.alert("O número é menor. Tente novamente.");
+        }
+      }
+    </script>
+</body>
+</html>

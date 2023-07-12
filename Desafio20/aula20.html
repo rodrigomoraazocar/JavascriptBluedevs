@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+</head>
+
+<body>
+
+    <script>
+      // Faça um programa que imprima na tela os números primos de 1 a 100.
+
+      function esPrimo(numero) {
+        if (numero <= 1) {
+          return false;
+        }
+
+        for (var i = 2; i <= Math.sqrt(numero); i++) {
+          if (numero % i === 0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      var primos = [];
+
+      for (var i = 1; i <= 100; i++) {
+        if (esPrimo(i)) {
+          primos.push(i);
+        }
+      }
+
+      window.alert("Números primos de 1 a 100:\n" + primos.join(", "));
+    </script>
+</body>
+
+</html>

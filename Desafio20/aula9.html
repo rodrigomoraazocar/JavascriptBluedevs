@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <p>Aula 01 - JavaScript- Devs2Blue</p>
+
+    <script>
+        // Crie um programa que solicite uma palavra ao usuário e verifique se contém uma letra específica.
+        // Para verificar se a letra desejada está presente, utilize uma função.
+
+        function verificarLetra(palavra, letra) {
+            return palavra.includes(letra);
+        }
+
+        var palavraUsuario = window.prompt("Digite uma palavra:");
+        var letraDesejada = window.prompt("Digite uma letra para verificar:");
+
+        var contemLetra = verificarLetra(palavraUsuario, letraDesejada);
+
+        if (contemLetra) {
+            window.alert("A palavra '" + palavraUsuario + "' contém a letra '" + letraDesejada + "'.");
+        } else {
+            window.alert("A palavra '" + palavraUsuario + "' não contém a letra '" + letraDesejada + "'.");
+        }
+    </script>
+</body>
+</html>

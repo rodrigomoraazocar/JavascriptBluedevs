@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+</head>
+
+<body>
+
+    <script>
+        // Faça um programa que leia uma lista de números inteiros até o usuário digitar zero
+        // y muestre el número más grande ingresado.
+
+        var numero;
+        var maximo = Number.NEGATIVE_INFINITY;
+
+        do {
+            numero = parseInt(window.prompt("Digite um número inteiro (digite zero para sair):"));
+
+            if (numero !== 0 && numero > maximo) {
+                maximo = numero;
+            }
+        } while (numero !== 0);
+
+        if (maximo === Number.NEGATIVE_INFINITY) {
+            window.alert("Nenhum número válido foi digitado.");
+        } else {
+            window.alert("O maior número digitado foi: " + maximo);
+        }
+    </script>
+</body>
+
+</html>

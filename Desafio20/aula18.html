@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+</head>
+
+<body>
+
+    <script>
+      // Escreva um programa que solicite ao usuário para digitar uma senha, repetindo a solicitação até que ele acerte a senha correta.
+
+      var senhaCorreta = "senha123";
+      var senhaUsuario;
+
+      do {
+          senhaUsuario = window.prompt("Digite a senha:");
+
+          if (senhaUsuario !== senhaCorreta) {
+              window.alert("Senha incorreta. Tente novamente.");
+          }
+      } while (senhaUsuario !== senhaCorreta);
+
+      window.alert("Senha correta!");
+    </script>
+</body>
+
+</html>

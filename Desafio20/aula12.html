@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <p>Aula 01 - JavaScript- Devs2Blue</p>
+
+    <script>
+      // Faça um programa que calcule a média de um vetor de números reais com 10 elementos.
+
+      var vetor = [3.5, 7.2, 1.8, 9.6, 5.4, 2.9, 6.1, 4.7, 8.2, 0.5];
+      var soma = 0;
+
+      for (var i = 0; i < vetor.length; i++) {
+        soma += vetor[i];
+      }
+
+      var media = soma / vetor.length;
+      window.alert("A média do vetor é: " + media);
+    </script>
+</body>
+</html>
