@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consulta de Endereço por CEP</title>
+  <link rel="stylesheet" type="text/css" href="/desafiocep/css/estyles.css">
+</head>
+<body>
+  <h1>Consulta de Endereço por CEP</h1>
+  <div class="form">
+    <div class="input-container">
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" maxlength="9">
+    </div>
+    <div class="input-container">
+      <label for="rua">Rua:</label>
+      <input type="text" id="rua" disabled>
+    </div>
+    <div class="input-container">
+      <label for="complemento">Complemento:</label>
+      <input type="text" id="complemento" disabled>
+    </div>
+    <div class="input-container">
+      <label for="bairro">Bairro:</label>
+      <input type="text" id="bairro" disabled>
+    </div>
+    <div class="input-container">
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" disabled>
+    </div>
+    <div class="input-container">
+      <label for="estado">Estado:</label>
+      <input type="text" id="estado" disabled>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/desafiocep/js/script.js"></script>
+  <script src="/desafiocep/js/jquery.mask.js"></script>
+</body>
+</html>
