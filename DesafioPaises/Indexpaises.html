@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - JavaScript-Devs2Blue</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #country-image {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Aula 01 - JavaScript- Devs2Blue</p>
+
+    <div class="container">
+        <label for="country-select">Selecciona un país:</label>
+        <select id="country-select" onchange="getCountryInfo()">
+            <option value="">-- Selecciona un país --</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brasil</option>
+            <option value="Canada">Canadá</option>
+            <option value="Germany">Alemania</option>
+            <option value="Spain">España</option>
+            <option value="United States">Estados Unidos</option>
+        </select>
+
+        <div id="country-info"></div>
+
+        <iframe id="country-image" src="" frameborder="0"></iframe>
+        </div>
+
+    <script>
+        function getCountryInfo() {
+            var countrySelect = document.getElementById('country-select');
+            var selectedCountry = countrySelect.value;
+
+            if (selectedCountry !== '') {
+                fetchCountryData(selectedCountry)
+                    .then(function (data) {
+                        displayCountryInfo(data);
+                        displayCountryImage(selectedCountry);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            } else {
+                resetCountryInfo();
+            }
+        }
+
+        function fetchCountryData(countryName) {
+            var url = 'https://restcountries.com/v3.1/name/' + countryName + '?fullText=true';
+            return fetch(url)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('Error al obtener los datos del país.');
+                    }
+                    return response.json();
+                });
+        }
+
+        function displayCountryInfo(countryData) {
+            var countryInfoDiv = document.getElementById('country-info');
+            var countryInfo = countryData[0];
+
+            var countryInfoHTML = '<h2>Información del País</h2>' +
+                '<p>Nombre: ' + countryInfo.name.common + '</p>' +
+                '<p>Capital: ' + countryInfo.capital + '</p>' +
+                '<p>Población: ' + countryInfo.population.toLocaleString() + '</p>' +
+                '<p>Área: ' + countryInfo.area.toLocaleString() + ' km²</p>' +
+                '<p>Moneda: ' + Object.values(countryInfo.currencies).map(function (currency) {
+                    return currency.name;
+                }).join(', ') + '</p>' +
+                '<img src='+ countryInfo.flags.png + '>';
+
+            countryInfoDiv.innerHTML = countryInfoHTML;
+        }
+
+      
+
+        function resetCountryInfo() {
+            var countryInfoDiv = document.getElementById('country-info');
+            countryInfoDiv.innerHTML = '';
+        }
+    </script>
+</body>
+
+</html>
